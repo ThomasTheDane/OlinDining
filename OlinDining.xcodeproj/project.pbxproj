@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA1B278E1894880A00F9EACD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B278D1894880A00F9EACD /* Foundation.framework */; };
+		DA1B27901894880A00F9EACD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B278F1894880A00F9EACD /* CoreGraphics.framework */; };
+		DA1B27921894880A00F9EACD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B27911894880A00F9EACD /* UIKit.framework */; };
+		DA1B27981894880A00F9EACD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA1B27961894880A00F9EACD /* InfoPlist.strings */; };
+		DA1B279A1894880A00F9EACD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27991894880A00F9EACD /* main.m */; };
+		DA1B279E1894880A00F9EACD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B279D1894880A00F9EACD /* AppDelegate.m */; };
+		DA1B27A11894880A00F9EACD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1B279F1894880A00F9EACD /* Main_iPhone.storyboard */; };
+		DA1B27A41894880A00F9EACD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1B27A21894880A00F9EACD /* Main_iPad.storyboard */; };
+		DA1B27A71894880A00F9EACD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27A61894880A00F9EACD /* MasterViewController.m */; };
+		DA1B27AA1894880A00F9EACD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27A91894880A00F9EACD /* DetailViewController.m */; };
+		DA1B27AC1894880A00F9EACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1B27AB1894880A00F9EACD /* Images.xcassets */; };
+		DA1B27B31894880A00F9EACD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B27B21894880A00F9EACD /* XCTest.framework */; };
+		DA1B27B41894880A00F9EACD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B278D1894880A00F9EACD /* Foundation.framework */; };
+		DA1B27B51894880A00F9EACD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B27911894880A00F9EACD /* UIKit.framework */; };
+		DA1B27BD1894880A00F9EACD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA1B27BB1894880A00F9EACD /* InfoPlist.strings */; };
+		DA1B27BF1894880A00F9EACD /* OlinDiningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27BE1894880A00F9EACD /* OlinDiningTests.m */; };
+		DA1B27DC18962CD600F9EACD /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27CA18962CD500F9EACD /* AFHTTPClient.m */; };
+		DA1B27DD18962CD600F9EACD /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27CC18962CD500F9EACD /* AFHTTPRequestOperation.m */; };
+		DA1B27DE18962CD600F9EACD /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27CE18962CD500F9EACD /* AFImageRequestOperation.m */; };
+		DA1B27DF18962CD600F9EACD /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27D018962CD500F9EACD /* AFJSONRequestOperation.m */; };
+		DA1B27E018962CD600F9EACD /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27D218962CD500F9EACD /* AFNetworkActivityIndicatorManager.m */; };
+		DA1B27E118962CD600F9EACD /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27D518962CD500F9EACD /* AFPropertyListRequestOperation.m */; };
+		DA1B27E218962CD600F9EACD /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27D718962CD500F9EACD /* AFURLConnectionOperation.m */; };
+		DA1B27E318962CD600F9EACD /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27D918962CD500F9EACD /* AFXMLRequestOperation.m */; };
+		DA1B27E418962CD600F9EACD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27DB18962CD600F9EACD /* UIImageView+AFNetworking.m */; };
+		DA1B27E71896D56300F9EACD /* FoodItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27E61896D56300F9EACD /* FoodItem.m */; };
+		DA1B27EA1898291B00F9EACD /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27E91898291B00F9EACD /* Week.m */; };
+		DA1B27ED18982B4500F9EACD /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27EC18982B4500F9EACD /* Meal.m */; };
+		DA1B27F018982BB900F9EACD /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27EF18982BB900F9EACD /* Day.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA1B27B61894880A00F9EACD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA1B27821894880900F9EACD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA1B27891894880900F9EACD;
+			remoteInfo = OlinDining;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA1B278A1894880900F9EACD /* OlinDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OlinDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1B278D1894880A00F9EACD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA1B278F1894880A00F9EACD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA1B27911894880A00F9EACD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA1B27951894880A00F9EACD /* OlinDining-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OlinDining-Info.plist"; sourceTree = "<group>"; };
+		DA1B27971894880A00F9EACD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA1B27991894880A00F9EACD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA1B279B1894880A00F9EACD /* OlinDining-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OlinDining-Prefix.pch"; sourceTree = "<group>"; };
+		DA1B279C1894880A00F9EACD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA1B279D1894880A00F9EACD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA1B27A01894880A00F9EACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		DA1B27A31894880A00F9EACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		DA1B27A51894880A00F9EACD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		DA1B27A61894880A00F9EACD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		DA1B27A81894880A00F9EACD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DA1B27A91894880A00F9EACD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DA1B27AB1894880A00F9EACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA1B27B11894880A00F9EACD /* OlinDiningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OlinDiningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1B27B21894880A00F9EACD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DA1B27BA1894880A00F9EACD /* OlinDiningTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OlinDiningTests-Info.plist"; sourceTree = "<group>"; };
+		DA1B27BC1894880A00F9EACD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA1B27BE1894880A00F9EACD /* OlinDiningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OlinDiningTests.m; sourceTree = "<group>"; };
+		DA1B27C918962CD500F9EACD /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		DA1B27CA18962CD500F9EACD /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		DA1B27CB18962CD500F9EACD /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		DA1B27CC18962CD500F9EACD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		DA1B27CD18962CD500F9EACD /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		DA1B27CE18962CD500F9EACD /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		DA1B27CF18962CD500F9EACD /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		DA1B27D018962CD500F9EACD /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		DA1B27D118962CD500F9EACD /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		DA1B27D218962CD500F9EACD /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		DA1B27D318962CD500F9EACD /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		DA1B27D418962CD500F9EACD /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		DA1B27D518962CD500F9EACD /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		DA1B27D618962CD500F9EACD /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		DA1B27D718962CD500F9EACD /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		DA1B27D818962CD500F9EACD /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		DA1B27D918962CD500F9EACD /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		DA1B27DA18962CD500F9EACD /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		DA1B27DB18962CD600F9EACD /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		DA1B27E51896D56300F9EACD /* FoodItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodItem.h; sourceTree = "<group>"; };
+		DA1B27E61896D56300F9EACD /* FoodItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodItem.m; sourceTree = "<group>"; };
+		DA1B27E81898291B00F9EACD /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Week.h; sourceTree = "<group>"; };
+		DA1B27E91898291B00F9EACD /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week.m; sourceTree = "<group>"; };
+		DA1B27EB18982B4500F9EACD /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		DA1B27EC18982B4500F9EACD /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		DA1B27EE18982BB900F9EACD /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		DA1B27EF18982BB900F9EACD /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA1B27871894880900F9EACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1B27901894880A00F9EACD /* CoreGraphics.framework in Frameworks */,
+				DA1B27921894880A00F9EACD /* UIKit.framework in Frameworks */,
+				DA1B278E1894880A00F9EACD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B27AE1894880A00F9EACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1B27B31894880A00F9EACD /* XCTest.framework in Frameworks */,
+				DA1B27B51894880A00F9EACD /* UIKit.framework in Frameworks */,
+				DA1B27B41894880A00F9EACD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA1B27811894880900F9EACD = {
+			isa = PBXGroup;
+			children = (
+				DA1B27931894880A00F9EACD /* OlinDining */,
+				DA1B27B81894880A00F9EACD /* OlinDiningTests */,
+				DA1B278C1894880900F9EACD /* Frameworks */,
+				DA1B278B1894880900F9EACD /* Products */,
+				DA1B27C818962CD500F9EACD /* AFNetworking */,
+			);
+			sourceTree = "<group>";
+		};
+		DA1B278B1894880900F9EACD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B278A1894880900F9EACD /* OlinDining.app */,
+				DA1B27B11894880A00F9EACD /* OlinDiningTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA1B278C1894880900F9EACD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B278D1894880A00F9EACD /* Foundation.framework */,
+				DA1B278F1894880A00F9EACD /* CoreGraphics.framework */,
+				DA1B27911894880A00F9EACD /* UIKit.framework */,
+				DA1B27B21894880A00F9EACD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA1B27931894880A00F9EACD /* OlinDining */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B279C1894880A00F9EACD /* AppDelegate.h */,
+				DA1B279D1894880A00F9EACD /* AppDelegate.m */,
+				DA1B279F1894880A00F9EACD /* Main_iPhone.storyboard */,
+				DA1B27A21894880A00F9EACD /* Main_iPad.storyboard */,
+				DA1B27A51894880A00F9EACD /* MasterViewController.h */,
+				DA1B27A61894880A00F9EACD /* MasterViewController.m */,
+				DA1B27E81898291B00F9EACD /* Week.h */,
+				DA1B27E91898291B00F9EACD /* Week.m */,
+				DA1B27EE18982BB900F9EACD /* Day.h */,
+				DA1B27EF18982BB900F9EACD /* Day.m */,
+				DA1B27E51896D56300F9EACD /* FoodItem.h */,
+				DA1B27E61896D56300F9EACD /* FoodItem.m */,
+				DA1B27EB18982B4500F9EACD /* Meal.h */,
+				DA1B27EC18982B4500F9EACD /* Meal.m */,
+				DA1B27A81894880A00F9EACD /* DetailViewController.h */,
+				DA1B27A91894880A00F9EACD /* DetailViewController.m */,
+				DA1B27AB1894880A00F9EACD /* Images.xcassets */,
+				DA1B27941894880A00F9EACD /* Supporting Files */,
+			);
+			path = OlinDining;
+			sourceTree = "<group>";
+		};
+		DA1B27941894880A00F9EACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B27951894880A00F9EACD /* OlinDining-Info.plist */,
+				DA1B27961894880A00F9EACD /* InfoPlist.strings */,
+				DA1B27991894880A00F9EACD /* main.m */,
+				DA1B279B1894880A00F9EACD /* OlinDining-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA1B27B81894880A00F9EACD /* OlinDiningTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B27BE1894880A00F9EACD /* OlinDiningTests.m */,
+				DA1B27B91894880A00F9EACD /* Supporting Files */,
+			);
+			path = OlinDiningTests;
+			sourceTree = "<group>";
+		};
+		DA1B27B91894880A00F9EACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B27BA1894880A00F9EACD /* OlinDiningTests-Info.plist */,
+				DA1B27BB1894880A00F9EACD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA1B27C818962CD500F9EACD /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				DA1B27C918962CD500F9EACD /* AFHTTPClient.h */,
+				DA1B27CA18962CD500F9EACD /* AFHTTPClient.m */,
+				DA1B27CB18962CD500F9EACD /* AFHTTPRequestOperation.h */,
+				DA1B27CC18962CD500F9EACD /* AFHTTPRequestOperation.m */,
+				DA1B27CD18962CD500F9EACD /* AFImageRequestOperation.h */,
+				DA1B27CE18962CD500F9EACD /* AFImageRequestOperation.m */,
+				DA1B27CF18962CD500F9EACD /* AFJSONRequestOperation.h */,
+				DA1B27D018962CD500F9EACD /* AFJSONRequestOperation.m */,
+				DA1B27D118962CD500F9EACD /* AFNetworkActivityIndicatorManager.h */,
+				DA1B27D218962CD500F9EACD /* AFNetworkActivityIndicatorManager.m */,
+				DA1B27D318962CD500F9EACD /* AFNetworking.h */,
+				DA1B27D418962CD500F9EACD /* AFPropertyListRequestOperation.h */,
+				DA1B27D518962CD500F9EACD /* AFPropertyListRequestOperation.m */,
+				DA1B27D618962CD500F9EACD /* AFURLConnectionOperation.h */,
+				DA1B27D718962CD500F9EACD /* AFURLConnectionOperation.m */,
+				DA1B27D818962CD500F9EACD /* AFXMLRequestOperation.h */,
+				DA1B27D918962CD500F9EACD /* AFXMLRequestOperation.m */,
+				DA1B27DA18962CD500F9EACD /* UIImageView+AFNetworking.h */,
+				DA1B27DB18962CD600F9EACD /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = ../AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA1B27891894880900F9EACD /* OlinDining */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1B27C21894880A00F9EACD /* Build configuration list for PBXNativeTarget "OlinDining" */;
+			buildPhases = (
+				DA1B27861894880900F9EACD /* Sources */,
+				DA1B27871894880900F9EACD /* Frameworks */,
+				DA1B27881894880900F9EACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OlinDining;
+			productName = OlinDining;
+			productReference = DA1B278A1894880900F9EACD /* OlinDining.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA1B27B01894880A00F9EACD /* OlinDiningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1B27C51894880A00F9EACD /* Build configuration list for PBXNativeTarget "OlinDiningTests" */;
+			buildPhases = (
+				DA1B27AD1894880A00F9EACD /* Sources */,
+				DA1B27AE1894880A00F9EACD /* Frameworks */,
+				DA1B27AF1894880A00F9EACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA1B27B71894880A00F9EACD /* PBXTargetDependency */,
+			);
+			name = OlinDiningTests;
+			productName = OlinDiningTests;
+			productReference = DA1B27B11894880A00F9EACD /* OlinDiningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA1B27821894880900F9EACD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Thomas Nattestad";
+				TargetAttributes = {
+					DA1B27B01894880A00F9EACD = {
+						TestTargetID = DA1B27891894880900F9EACD;
+					};
+				};
+			};
+			buildConfigurationList = DA1B27851894880900F9EACD /* Build configuration list for PBXProject "OlinDining" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA1B27811894880900F9EACD;
+			productRefGroup = DA1B278B1894880900F9EACD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA1B27891894880900F9EACD /* OlinDining */,
+				DA1B27B01894880A00F9EACD /* OlinDiningTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA1B27881894880900F9EACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1B27A41894880A00F9EACD /* Main_iPad.storyboard in Resources */,
+				DA1B27AC1894880A00F9EACD /* Images.xcassets in Resources */,
+				DA1B27A11894880A00F9EACD /* Main_iPhone.storyboard in Resources */,
+				DA1B27981894880A00F9EACD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B27AF1894880A00F9EACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1B27BD1894880A00F9EACD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA1B27861894880900F9EACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1B27ED18982B4500F9EACD /* Meal.m in Sources */,
+				DA1B27E218962CD600F9EACD /* AFURLConnectionOperation.m in Sources */,
+				DA1B27E418962CD600F9EACD /* UIImageView+AFNetworking.m in Sources */,
+				DA1B27DE18962CD600F9EACD /* AFImageRequestOperation.m in Sources */,
+				DA1B27F018982BB900F9EACD /* Day.m in Sources */,
+				DA1B27DD18962CD600F9EACD /* AFHTTPRequestOperation.m in Sources */,
+				DA1B27DC18962CD600F9EACD /* AFHTTPClient.m in Sources */,
+				DA1B27E318962CD600F9EACD /* AFXMLRequestOperation.m in Sources */,
+				DA1B279E1894880A00F9EACD /* AppDelegate.m in Sources */,
+				DA1B27A71894880A00F9EACD /* MasterViewController.m in Sources */,
+				DA1B27E71896D56300F9EACD /* FoodItem.m in Sources */,
+				DA1B279A1894880A00F9EACD /* main.m in Sources */,
+				DA1B27EA1898291B00F9EACD /* Week.m in Sources */,
+				DA1B27DF18962CD600F9EACD /* AFJSONRequestOperation.m in Sources */,
+				DA1B27AA1894880A00F9EACD /* DetailViewController.m in Sources */,
+				DA1B27E118962CD600F9EACD /* AFPropertyListRequestOperation.m in Sources */,
+				DA1B27E018962CD600F9EACD /* AFNetworkActivityIndicatorManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1B27AD1894880A00F9EACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1B27BF1894880A00F9EACD /* OlinDiningTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA1B27B71894880A00F9EACD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA1B27891894880900F9EACD /* OlinDining */;
+			targetProxy = DA1B27B61894880A00F9EACD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA1B27961894880A00F9EACD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1B27971894880A00F9EACD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA1B279F1894880A00F9EACD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1B27A01894880A00F9EACD /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DA1B27A21894880A00F9EACD /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1B27A31894880A00F9EACD /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DA1B27BB1894880A00F9EACD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1B27BC1894880A00F9EACD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA1B27C01894880A00F9EACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA1B27C11894880A00F9EACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA1B27C31894880A00F9EACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OlinDining/OlinDining-Prefix.pch";
+				INFOPLIST_FILE = "OlinDining/OlinDining-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA1B27C41894880A00F9EACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OlinDining/OlinDining-Prefix.pch";
+				INFOPLIST_FILE = "OlinDining/OlinDining-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA1B27C61894880A00F9EACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OlinDining.app/OlinDining";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OlinDining/OlinDining-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OlinDiningTests/OlinDiningTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DA1B27C71894880A00F9EACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OlinDining.app/OlinDining";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OlinDining/OlinDining-Prefix.pch";
+				INFOPLIST_FILE = "OlinDiningTests/OlinDiningTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA1B27851894880900F9EACD /* Build configuration list for PBXProject "OlinDining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1B27C01894880A00F9EACD /* Debug */,
+				DA1B27C11894880A00F9EACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA1B27C21894880A00F9EACD /* Build configuration list for PBXNativeTarget "OlinDining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1B27C31894880A00F9EACD /* Debug */,
+				DA1B27C41894880A00F9EACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA1B27C51894880A00F9EACD /* Build configuration list for PBXNativeTarget "OlinDiningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1B27C61894880A00F9EACD /* Debug */,
+				DA1B27C71894880A00F9EACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA1B27821894880900F9EACD /* Project object */;
+}
