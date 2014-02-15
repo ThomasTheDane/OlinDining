@@ -14,6 +14,13 @@
 
 -(id)init{
     self = [super init];
+//    NSMutableArray *temp = [[NSMutableArray alloc] init];
+//    for(int i = 0; i < 7; i++){
+//        Day *aDay = [[Day alloc] init];
+//        aDay.name = @"Eat dick ezra!";
+//        [temp addObject:aDay];
+//    }
+//    self.days = [[NSArray alloc] initWithArray:temp];
 //    if(self){
 //        self = [self initWithJSON];
 //    }
@@ -27,6 +34,8 @@
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             NSLog(@"Loaded and shit");
+            NSMutableArray *temp = [[NSMutableArray alloc] init];
+            
 //            [[NSNotificationCenter defaultCenter] postNotificationName:@"initFoodItemFinishedLoading" object:nil];
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
             NSLog(@"NSError: %@",[error localizedDescription]);
