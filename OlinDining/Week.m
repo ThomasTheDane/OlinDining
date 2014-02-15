@@ -14,29 +14,36 @@
 
 -(id)init{
     self = [super init];
-//    NSMutableArray *temp = [[NSMutableArray alloc] init];
-//    for(int i = 0; i < 7; i++){
-//        Day *aDay = [[Day alloc] init];
-//        aDay.name = @"Eat dick ezra!";
-//        [temp addObject:aDay];
-//    }
-//    self.days = [[NSArray alloc] initWithArray:temp];
-//    if(self){
-//        self = [self initWithJSON];
-//    }
+    if(self){
+        self = [self initWithJSON];
+    }
+    //    NSMutableArray *temp = [[NSMutableArray alloc] init];
+    //    for(int i = 0; i < 7; i++){
+    //        Day *aDay = [[Day alloc] init];
+    //        aDay.name = @"Eat dick ezra!";
+    //        [temp addObject:aDay];
+    //    }
+    //    self.days = [[NSArray alloc] initWithArray:temp];
     return self;
 }
 
 -(id)initWithJSON{
     self = [super init];
     if(self){
-        NSURL *url = [[NSURL alloc] initWithString:@"http://operation-models.codeschool.com/feedImages.json"];
+        NSURL *url = [[NSURL alloc] initWithString:@"http://www.olinapps.com/api/dining/olin"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             NSLog(@"Loaded and shit");
             NSMutableArray *temp = [[NSMutableArray alloc] init];
-            
-//            [[NSNotificationCenter defaultCenter] postNotificationName:@"initFoodItemFinishedLoading" object:nil];
+            for(NSDictionary *JSONPiece in JSON){
+                Day *aDay = [[Day alloc] init];
+                aDay.name = JSONPiece[@"dayname"];
+                [temp addObject:aDay];
+            }
+            self.days = [[NSArray alloc] initWithArray:temp];
+            NSLog(@"loaded the week: %@", self.days);
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"initWithJsonWeekFinished" object:nil];
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
             NSLog(@"NSError: %@",[error localizedDescription]);
         }];

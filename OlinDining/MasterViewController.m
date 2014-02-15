@@ -12,7 +12,7 @@
 #import "Day.h"
 
 @interface MasterViewController () {
-    NSMutableArray *days;
+    
 }
 @end
 
@@ -28,15 +28,21 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    Week *theWeek = [[Week alloc] init];
-    days = [[NSMutableArray alloc] initWithArray:theWeek.days];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dayLoaded) name:@"initWithJsonWeekFinished" object:nil];
+    self.week = [[Week alloc] init];
     
+    //    [self dayLoaded];
 	// Do any additional setup after loading the view, typically from a nib.
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    //    self.navigationItem.rightBarButtonItem = addButton;
+    //    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+}
 
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
-//    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+- (void)dayLoaded{
+    NSLog(@"day 1 is: %@", [[self.week days] objectAtIndex:0]);
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -51,14 +57,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return days.count;
+    return self.week.days.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    Day *day = days[indexPath.row];
-    cell.textLabel.text = [day name];
+    NSLog(@"Loading cell");
+    cell.textLabel.text = [self.week.days[indexPath.row] name];
+    //    NSLog(@"loading cell with name: %@", [day name]);
     return cell;
 }
 
@@ -67,34 +73,34 @@
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [days removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        [self.week.days removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//    }
+//}
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        Day *object = days[indexPath.row];
+        Day *object = self.week.days[indexPath.row];
         self.detailViewController.detailItem = object;
     }
 }
@@ -102,8 +108,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Day *day = days[indexPath.row];
-        [[segue destinationViewController] setDetailItem:day];
+        Day *object = self.week.days[indexPath.row];
+        [[segue destinationViewController] setDetailItem:object];
     }
 }
 
