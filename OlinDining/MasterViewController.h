@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Week.h"
+#import "GAITrackedViewController.h"
 
 @class DayViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <GAITracker>
 
 @property (strong, nonatomic) DayViewController *dayViewController;
 @property (strong, nonatomic) Week *week;
