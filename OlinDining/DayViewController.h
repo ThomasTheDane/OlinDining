@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Day.h"
 
-@class FoodViewController;
+@class MealViewController;
 
 @interface DayViewController : UITableViewController
 
-@property (strong, nonatomic) FoodViewController *foodViewController;
+- (void)setDayItem:(id)newDetailItem;
+
+@property (strong, nonatomic) MealViewController *mealViewController;
 @property (strong, nonatomic) Day *day;
 
 @end

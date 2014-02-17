@@ -61,7 +61,7 @@
                     for(NSDictionary *aFood in subMeal){
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
-                        [tempBreakfastFoods addObject:food];
+                        [tempLunchFoods addObject:food];
                     }
                 }
                 lunch.foodItems = [[NSArray alloc] initWithArray:tempLunchFoods];
@@ -76,7 +76,7 @@
                     for(NSDictionary *aFood in subMeal){
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
-                        [tempBreakfastFoods addObject:food];
+                        [tempDinnerFoods addObject:food];
                     }
                 }
                 dinner.foodItems = [[NSArray alloc] initWithArray:tempDinnerFoods];

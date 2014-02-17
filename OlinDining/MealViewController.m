@@ -1,24 +1,22 @@
 //
-//  DayViewController.m
+//  MealViewController.m
 //  OlinDining
 //
-//  Created by Thomas Nattestad on 2/15/14.
+//  Created by Thomas Nattestad on 2/16/14.
 //  Copyright (c) 2014 Thomas Nattestad. All rights reserved.
 //
 
-#import "DayViewController.h"
 #import "MealViewController.h"
 
-@interface DayViewController ()
+@interface MealViewController ()
 
 @end
 
-@implementation DayViewController
+@implementation MealViewController
 
-- (void)setDayItem:(id)newDetailItem{
-    NSLog(@"set detail item for day");
-    if(self.day != newDetailItem){
-        self.day = newDetailItem;
+-(void)setMealItem:(id)newDetailItem{
+    if(self.meal != newDetailItem){
+        self.meal = newDetailItem;
     }
 }
 
@@ -34,8 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"activated day view controller");
-
+    NSLog(@"view loaded meal");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -60,18 +57,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"count: %lu", (unsigned long)[self.day.meals count]);
-    return [self.day.meals count];
+    tableView.allowsSelection = false;
+    return [[self.meal foodItems] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryNone;
     
     // Configure the cell...
-    NSLog([self.day.meals[indexPath.row] name]);
-    cell.textLabel.text = [self.day.meals[indexPath.row] name];
+    cell.textLabel.text = [self.meal.foodItems[indexPath.row] name];
     return cell;
 }
 
@@ -114,22 +111,16 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"did select a day");
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        Meal *object = self.day.meals[indexPath.row];
-//        self.mealViewController.meal = object;
-//    }
-//}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"did prepare for segue");
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    Meal *object = self.day.meals[indexPath.row];
-    [[segue destinationViewController] setMealItem:object];
+// In a story board-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
 
+ */
 
 @end

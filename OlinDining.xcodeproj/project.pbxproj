@@ -37,6 +37,7 @@
 		DABB496818AC26200070D099 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB495E18AC26200070D099 /* AFXMLRequestOperation.m */; };
 		DABB496918AC26200070D099 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB496018AC26200070D099 /* UIImageView+AFNetworking.m */; };
 		DABB496C18AFFCA10070D099 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB496B18AFFCA10070D099 /* DayViewController.m */; };
+		DABB496F18B194850070D099 /* MealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB496E18B194850070D099 /* MealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		DABB496018AC26200070D099 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		DABB496A18AFFCA10070D099 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
 		DABB496B18AFFCA10070D099 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
+		DABB496D18B194850070D099 /* MealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealViewController.h; sourceTree = "<group>"; };
+		DABB496E18B194850070D099 /* MealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				DA1B27A61894880A00F9EACD /* MasterViewController.m */,
 				DABB496A18AFFCA10070D099 /* DayViewController.h */,
 				DABB496B18AFFCA10070D099 /* DayViewController.m */,
+				DABB496D18B194850070D099 /* MealViewController.h */,
+				DABB496E18B194850070D099 /* MealViewController.m */,
 				DA1B27E81898291B00F9EACD /* Week.h */,
 				DA1B27E91898291B00F9EACD /* Week.m */,
 				DA1B27EE18982BB900F9EACD /* Day.h */,
@@ -343,6 +348,7 @@
 				DA1B27F018982BB900F9EACD /* Day.m in Sources */,
 				DABB496418AC26200070D099 /* AFJSONRequestOperation.m in Sources */,
 				DABB496218AC26200070D099 /* AFHTTPRequestOperation.m in Sources */,
+				DABB496F18B194850070D099 /* MealViewController.m in Sources */,
 				DABB496818AC26200070D099 /* AFXMLRequestOperation.m in Sources */,
 				DABB496718AC26200070D099 /* AFURLConnectionOperation.m in Sources */,
 				DABB496318AC26200070D099 /* AFImageRequestOperation.m in Sources */,

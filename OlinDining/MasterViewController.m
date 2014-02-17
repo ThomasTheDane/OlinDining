@@ -41,7 +41,6 @@
 }
 
 - (void)dayLoaded{
-    NSLog(@"day 1 is: %@", [[self.week days] objectAtIndex:0]);
     [self.tableView reloadData];
 }
 
