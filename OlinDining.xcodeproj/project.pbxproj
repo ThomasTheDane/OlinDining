@@ -36,6 +36,7 @@
 		DABB496718AC26200070D099 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB495C18AC26200070D099 /* AFURLConnectionOperation.m */; };
 		DABB496818AC26200070D099 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB495E18AC26200070D099 /* AFXMLRequestOperation.m */; };
 		DABB496918AC26200070D099 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB496018AC26200070D099 /* UIImageView+AFNetworking.m */; };
+		DABB496C18AFFCA10070D099 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABB496B18AFFCA10070D099 /* DayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		DABB495E18AC26200070D099 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		DABB495F18AC26200070D099 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		DABB496018AC26200070D099 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		DABB496A18AFFCA10070D099 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
+		DABB496B18AFFCA10070D099 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				DA1B27A21894880A00F9EACD /* Main_iPad.storyboard */,
 				DA1B27A51894880A00F9EACD /* MasterViewController.h */,
 				DA1B27A61894880A00F9EACD /* MasterViewController.m */,
+				DABB496A18AFFCA10070D099 /* DayViewController.h */,
+				DABB496B18AFFCA10070D099 /* DayViewController.m */,
 				DA1B27E81898291B00F9EACD /* Week.h */,
 				DA1B27E91898291B00F9EACD /* Week.m */,
 				DA1B27EE18982BB900F9EACD /* Day.h */,
@@ -348,6 +353,7 @@
 				DA1B27E71896D56300F9EACD /* FoodItem.m in Sources */,
 				DABB496518AC26200070D099 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				DA1B279A1894880A00F9EACD /* main.m in Sources */,
+				DABB496C18AFFCA10070D099 /* DayViewController.m in Sources */,
 				DA1B27EA1898291B00F9EACD /* Week.m in Sources */,
 				DA1B27AA1894880A00F9EACD /* DetailViewController.m in Sources */,
 			);

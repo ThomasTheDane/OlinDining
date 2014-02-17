@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Week.h"
 
-@class DetailViewController;
+@class DayViewController;
 
 @interface MasterViewController : UITableViewController
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) DayViewController *dayViewController;
 @property (strong, nonatomic) Week *week;
 
 @end

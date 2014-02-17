@@ -7,7 +7,7 @@
 //
 
 #import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "DayViewController.h"
 #import "Week.h"
 #import "Day.h"
 
@@ -99,18 +99,18 @@
  */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"did select a day");
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         Day *object = self.week.days[indexPath.row];
-        self.detailViewController.detailItem = object;
+        self.dayViewController.day = object;
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Day *object = self.week.days[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
+    NSLog(@"did prepare for segue");
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    Day *object = self.week.days[indexPath.row];
+    [[segue destinationViewController] setDayItem:object];
 }
 
 @end
