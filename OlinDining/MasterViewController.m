@@ -10,7 +10,9 @@
 #import "DayViewController.h"
 #import "Week.h"
 #import "Day.h"
-
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface MasterViewController () {
     
@@ -29,6 +31,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker set:kGAIScreenName value:@"Week View"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dayLoaded) name:@"initWithJsonWeekFinished" object:nil];
     self.week = [[Week alloc] init];
     

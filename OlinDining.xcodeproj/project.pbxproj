@@ -17,7 +17,6 @@
 		DA1B27A41894880A00F9EACD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1B27A21894880A00F9EACD /* Main_iPad.storyboard */; };
 		DA1B27A71894880A00F9EACD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27A61894880A00F9EACD /* MasterViewController.m */; };
 		DA1B27AA1894880A00F9EACD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B27A91894880A00F9EACD /* DetailViewController.m */; };
-		DA1B27AC1894880A00F9EACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1B27AB1894880A00F9EACD /* Images.xcassets */; };
 		DA1B27B31894880A00F9EACD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B27B21894880A00F9EACD /* XCTest.framework */; };
 		DA1B27B41894880A00F9EACD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B278D1894880A00F9EACD /* Foundation.framework */; };
 		DA1B27B51894880A00F9EACD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B27911894880A00F9EACD /* UIKit.framework */; };
@@ -43,6 +42,7 @@
 		DABB497B18B1AEE70070D099 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABB497A18B1AEE70070D099 /* CoreData.framework */; };
 		DABB497D18B1AEF70070D099 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABB497C18B1AEF70070D099 /* SystemConfiguration.framework */; };
 		DABB497F18B1AF240070D099 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DABB497E18B1AF240070D099 /* libz.dylib */; };
+		DABB498118B529280070D099 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABB498018B529280070D099 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,6 @@
 		DA1B27A61894880A00F9EACD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		DA1B27A81894880A00F9EACD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		DA1B27A91894880A00F9EACD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		DA1B27AB1894880A00F9EACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA1B27B11894880A00F9EACD /* OlinDiningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OlinDiningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B27B21894880A00F9EACD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DA1B27BA1894880A00F9EACD /* OlinDiningTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OlinDiningTests-Info.plist"; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 		DABB497A18B1AEE70070D099 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DABB497C18B1AEF70070D099 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DABB497E18B1AF240070D099 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DABB498018B529280070D099 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +196,7 @@
 		DA1B27931894880A00F9EACD /* OlinDining */ = {
 			isa = PBXGroup;
 			children = (
+				DABB498018B529280070D099 /* Images.xcassets */,
 				DA1B279C1894880A00F9EACD /* AppDelegate.h */,
 				DA1B279D1894880A00F9EACD /* AppDelegate.m */,
 				DA1B279F1894880A00F9EACD /* Main_iPhone.storyboard */,
@@ -216,7 +217,6 @@
 				DA1B27EC18982B4500F9EACD /* Meal.m */,
 				DA1B27A81894880A00F9EACD /* DetailViewController.h */,
 				DA1B27A91894880A00F9EACD /* DetailViewController.m */,
-				DA1B27AB1894880A00F9EACD /* Images.xcassets */,
 				DA1B27941894880A00F9EACD /* Supporting Files */,
 			);
 			path = OlinDining;
@@ -357,7 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1B27A41894880A00F9EACD /* Main_iPad.storyboard in Resources */,
-				DA1B27AC1894880A00F9EACD /* Images.xcassets in Resources */,
+				DABB498118B529280070D099 /* Images.xcassets in Resources */,
 				DA1B27A11894880A00F9EACD /* Main_iPhone.storyboard in Resources */,
 				DA1B27981894880A00F9EACD /* InfoPlist.strings in Resources */,
 			);
@@ -538,12 +538,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OlinDining/OlinDining-Prefix.pch";
 				INFOPLIST_FILE = "OlinDining/OlinDining-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/thomasnat1/Google\\ Drive/side\\ projects/95theses/google\\ analytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -558,12 +560,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OlinDining/OlinDining-Prefix.pch";
 				INFOPLIST_FILE = "OlinDining/OlinDining-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/thomasnat1/Google\\ Drive/side\\ projects/95theses/google\\ analytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

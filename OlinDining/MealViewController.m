@@ -7,6 +7,9 @@
 //
 
 #import "MealViewController.h"
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface MealViewController ()
 
@@ -33,6 +36,11 @@
 {
     [super viewDidLoad];
     NSLog(@"view loaded meal");
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker set:kGAIScreenName value:@"Meal View"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

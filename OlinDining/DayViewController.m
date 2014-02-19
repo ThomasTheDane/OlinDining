@@ -8,6 +8,9 @@
 
 #import "DayViewController.h"
 #import "MealViewController.h"
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface DayViewController ()
 
@@ -35,6 +38,10 @@
 {
     [super viewDidLoad];
     NSLog(@"activated day view controller");
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker set:kGAIScreenName value:@"Day View"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
