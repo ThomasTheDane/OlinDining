@@ -21,6 +21,10 @@
     if(self.meal != newDetailItem){
         self.meal = newDetailItem;
     }
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker set:kGAIScreenName value:self.meal.name];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -36,11 +40,6 @@
 {
     [super viewDidLoad];
     NSLog(@"view loaded meal");
-    id tracker = [[GAI sharedInstance] defaultTracker];
-    
-    [tracker set:kGAIScreenName value:@"Meal View"];
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
