@@ -58,14 +58,24 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [[self.meal foodItems] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    tableView.allowsSelection = false;
-    return [[self.meal foodItems] count];
+    NSDictionary *dictionary = [[self.meal foodItems] objectAtIndex:section];
+    NSArray *keys = [dictionary allKeys];
+    NSArray *array = [dictionary objectForKey:[keys objectAtIndex:0]];
+    return [array count];
+//    tableView.allowsSelection = false;
+//    return [[self.meal foodItems] count];
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSDictionary *dictionary = [[self.meal foodItems] objectAtIndex:section];
+    NSArray *keys = [dictionary allKeys];
+    return [keys objectAtIndex:0];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,9 +85,15 @@
     cell.accessoryType = UITableViewCellAccessoryNone;
     
     // Configure the cell...
-    cell.textLabel.text = [self.meal.foodItems[indexPath.row] name];
-    return cell;
+    NSDictionary *dictionary = [[self.meal foodItems] objectAtIndex:indexPath.section];
+    NSArray *keys = [dictionary allKeys];
+    NSArray *array = [dictionary objectForKey:[keys objectAtIndex:0]];
+    cell.textLabel.text = [[array objectAtIndex:indexPath.row] name];
+//    cell.textLabel.text = @"eat dick ezra";
+  return cell;
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

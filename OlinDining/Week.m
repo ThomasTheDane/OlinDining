@@ -39,48 +39,67 @@
 
                 Meal *breakfast = [[Meal alloc] init];
                 breakfast.name = @"Breakfast";
-                NSMutableArray *tempBreakfastFoods = [[NSMutableArray alloc] init];
+                NSMutableArray *tempBreakfastSubMeals = [[NSMutableArray alloc] init];
+
                 for(NSString *aKey in [day[@"breakfast"] allKeys]){
                     NSArray *subMeal = day[@"breakfast"][aKey];
                     //move through subMeal
+                    NSMutableArray *tempSubMeal = [[NSMutableArray alloc] init];
                     for(NSDictionary *aFood in subMeal){
+
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
-                        [tempBreakfastFoods addObject:food];
+                        [tempSubMeal addObject:food];
                     }
+                    //add dictionary to submeals array
+                    NSDictionary *subMealDict = [NSDictionary dictionaryWithObject:tempSubMeal forKey:aKey];
+                    [tempBreakfastSubMeals addObject:subMealDict];
                 }
-                breakfast.foodItems = [[NSArray alloc] initWithArray:tempBreakfastFoods];
+                breakfast.foodItems = [[NSArray alloc] initWithArray:tempBreakfastSubMeals];
                 [tempMeals addObject:breakfast];
                 
                 Meal *lunch = [[Meal alloc] init];
                 lunch.name = @"Lunch";
-                NSMutableArray *tempLunchFoods = [[NSMutableArray alloc] init];
+                NSMutableArray *tempLunchSubMeals = [[NSMutableArray alloc] init];
+                
                 for(NSString *aKey in [day[@"lunch"] allKeys]){
                     NSArray *subMeal = day[@"lunch"][aKey];
                     //move through subMeal
+                    NSMutableArray *tempSubMeal = [[NSMutableArray alloc] init];
                     for(NSDictionary *aFood in subMeal){
+                        
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
-                        [tempLunchFoods addObject:food];
+                        [tempSubMeal addObject:food];
                     }
+                    //add dictionary to submeals array
+                    NSDictionary *subMealDict = [NSDictionary dictionaryWithObject:tempSubMeal forKey:aKey];
+                    [tempLunchSubMeals addObject:subMealDict];
                 }
-                lunch.foodItems = [[NSArray alloc] initWithArray:tempLunchFoods];
+                lunch.foodItems = [[NSArray alloc] initWithArray:tempLunchSubMeals];
                 [tempMeals addObject:lunch];
-                
+
                 Meal *dinner = [[Meal alloc] init];
                 dinner.name = @"Dinner";
-                NSMutableArray *tempDinnerFoods = [[NSMutableArray alloc] init];
+                NSMutableArray *tempDinnerSubMeals = [[NSMutableArray alloc] init];
+                
                 for(NSString *aKey in [day[@"dinner"] allKeys]){
                     NSArray *subMeal = day[@"dinner"][aKey];
                     //move through subMeal
+                    NSMutableArray *tempSubMeal = [[NSMutableArray alloc] init];
                     for(NSDictionary *aFood in subMeal){
+                        
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
-                        [tempDinnerFoods addObject:food];
+                        [tempSubMeal addObject:food];
                     }
+                    //add dictionary to submeals array
+                    NSDictionary *subMealDict = [NSDictionary dictionaryWithObject:tempSubMeal forKey:aKey];
+                    [tempDinnerSubMeals addObject:subMealDict];
                 }
-                dinner.foodItems = [[NSArray alloc] initWithArray:tempDinnerFoods];
+                dinner.foodItems = [[NSArray alloc] initWithArray:tempDinnerSubMeals];
                 [tempMeals addObject:dinner];
+
                 
                 aDay.meals = [[NSArray alloc] initWithArray:tempMeals];
                 [tempDays addObject:aDay];
