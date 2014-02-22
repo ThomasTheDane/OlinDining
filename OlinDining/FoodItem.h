@@ -11,5 +11,7 @@
 @interface FoodItem : NSObject
 
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSDictionary *nutrition;
+
 
 @end

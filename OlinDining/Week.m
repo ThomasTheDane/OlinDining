@@ -24,7 +24,7 @@
 -(id)initWithJSON{
     self = [super init];
     if(self){
-        NSURL *url = [[NSURL alloc] initWithString:@"http://www.olinapps.com/api/dining/olin"];
+        NSURL *url = [[NSURL alloc] initWithString:@"http://www.olinapps.com/api/dining/olin/nutrition"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
@@ -49,6 +49,7 @@
 
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
+                        food.nutrition = aFood[@"nutrition"];
                         [tempSubMeal addObject:food];
                     }
                     //add dictionary to submeals array

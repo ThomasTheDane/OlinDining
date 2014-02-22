@@ -207,6 +207,8 @@
 				DABB496B18AFFCA10070D099 /* DayViewController.m */,
 				DABB496D18B194850070D099 /* MealViewController.h */,
 				DABB496E18B194850070D099 /* MealViewController.m */,
+				DA1B27A81894880A00F9EACD /* DetailViewController.h */,
+				DA1B27A91894880A00F9EACD /* DetailViewController.m */,
 				DA1B27E81898291B00F9EACD /* Week.h */,
 				DA1B27E91898291B00F9EACD /* Week.m */,
 				DA1B27EE18982BB900F9EACD /* Day.h */,
@@ -215,8 +217,6 @@
 				DA1B27EC18982B4500F9EACD /* Meal.m */,
 				DA1B27E51896D56300F9EACD /* FoodItem.h */,
 				DA1B27E61896D56300F9EACD /* FoodItem.m */,
-				DA1B27A81894880A00F9EACD /* DetailViewController.h */,
-				DA1B27A91894880A00F9EACD /* DetailViewController.m */,
 				DA1B27941894880A00F9EACD /* Supporting Files */,
 			);
 			path = OlinDining;

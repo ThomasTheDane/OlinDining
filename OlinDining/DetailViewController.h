@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoodItem.h"
+
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
+- (void)setFoodItem:(id)newDetailItem;
+
+@property (strong, nonatomic) FoodItem *food;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

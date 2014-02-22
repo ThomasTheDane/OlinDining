@@ -7,6 +7,8 @@
 //
 
 #import "MealViewController.h"
+#import "DetailViewController.h"
+#import "FoodItem.h"
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
@@ -82,7 +84,7 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryNone;
+//    cell.accessoryType = UITableViewCellAccessoryNone;
     
     // Configure the cell...
     NSDictionary *dictionary = [[self.meal foodItems] objectAtIndex:indexPath.section];
@@ -91,6 +93,18 @@
     cell.textLabel.text = [[array objectAtIndex:indexPath.row] name];
 //    cell.textLabel.text = @"eat dick ezra";
   return cell;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"did prepare for segue");
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    NSDictionary *dictionary = [[self.meal foodItems] objectAtIndex:indexPath.section];
+    NSArray *keys = [dictionary allKeys];
+    NSArray *array = [dictionary objectForKey:[keys objectAtIndex:0]];
+    FoodItem *object = array[indexPath.row];
+    [[segue destinationViewController] setFoodItem:object];
 }
 
 

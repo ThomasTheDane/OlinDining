@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Meal.h"
 
+@class DetailViewController;
+
 @interface MealViewController : UITableViewController
 
 - (void)setMealItem:(id)newDetailItem;
 
 @property (strong, nonatomic) Meal *meal;
+@property (strong, nonatomic) DetailViewController *detailViewController;
 
 @end
