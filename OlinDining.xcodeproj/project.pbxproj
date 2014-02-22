@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1A39C818B8A67400067A0D /* food_label_original.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA1A39C618B8A67400067A0D /* food_label_original.gif */; };
 		DA1B278E1894880A00F9EACD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B278D1894880A00F9EACD /* Foundation.framework */; };
 		DA1B27901894880A00F9EACD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B278F1894880A00F9EACD /* CoreGraphics.framework */; };
 		DA1B27921894880A00F9EACD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B27911894880A00F9EACD /* UIKit.framework */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1A39C618B8A67400067A0D /* food_label_original.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = food_label_original.gif; path = images/food_label_original.gif; sourceTree = SOURCE_ROOT; };
 		DA1B278A1894880900F9EACD /* OlinDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OlinDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1B278D1894880A00F9EACD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DA1B278F1894880A00F9EACD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -217,6 +219,7 @@
 				DA1B27EC18982B4500F9EACD /* Meal.m */,
 				DA1B27E51896D56300F9EACD /* FoodItem.h */,
 				DA1B27E61896D56300F9EACD /* FoodItem.m */,
+				DA1A39C618B8A67400067A0D /* food_label_original.gif */,
 				DA1B27941894880A00F9EACD /* Supporting Files */,
 			);
 			path = OlinDining;
@@ -356,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1A39C818B8A67400067A0D /* food_label_original.gif in Resources */,
 				DA1B27A41894880A00F9EACD /* Main_iPad.storyboard in Resources */,
 				DABB498118B529280070D099 /* Images.xcassets in Resources */,
 				DA1B27A11894880A00F9EACD /* Main_iPhone.storyboard in Resources */,

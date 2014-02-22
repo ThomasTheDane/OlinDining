@@ -33,7 +33,11 @@
 - (void)configureView{
     // Update the user interface for the detail item.
     if (self.food) {
-        self.detailDescriptionLabel.text = [self.food name];
+        self.contentScrollView.contentSize = CGSizeMake(320, 800);
+        
+        NSDictionary *nutrition = [self.food nutrition];
+        self.foodDescriptionLabel.text = [nutrition objectForKey:@"description"];;
+        self.foodNameLabel.text = [self.food name];
     }
 }
 
