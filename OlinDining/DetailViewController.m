@@ -27,44 +27,14 @@
     }
     id tracker = [[GAI sharedInstance] defaultTracker];
     
-    [tracker set:kGAIScreenName value:@"Detail View"];
+    [tracker set:kGAIScreenName value:@"Detail Food View"];
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 }
 - (void)configureView{
     // Update the user interface for the detail item.
     if (self.food) {
         self.contentScrollView.contentSize = CGSizeMake(320, 850);
-        /*
-         @property (weak, nonatomic) IBOutlet UILabel *foodNameLabel;
-         @property (weak, nonatomic) IBOutlet UILabel *foodDescriptionLabel;
-         @property (weak, nonatomic) IBOutlet UILabel *foodServSize;
-         @property (weak, nonatomic) IBOutlet UILabel *foodCalories;
-         @property (weak, nonatomic) IBOutlet UILabel *foodFatCalories;
-         @property (weak, nonatomic) IBOutlet UILabel *foodFat;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentFatDv;
-         @property (weak, nonatomic) IBOutlet UILabel *foodSatfat;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentSatfat;
-         @property (weak, nonatomic) IBOutlet UILabel *foodTransFat;
-         @property (weak, nonatomic) IBOutlet UILabel *foodCholesterol;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentCholesterol;
-         @property (weak, nonatomic) IBOutlet UILabel *foodSodium;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentSodium;
-         @property (weak, nonatomic) IBOutlet UILabel *foodCarbo;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentCarbo;
-         @property (weak, nonatomic) IBOutlet UILabel *foodDfib;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentDfib;
-         @property (weak, nonatomic) IBOutlet UILabel *foodSugars;
-         @property (weak, nonatomic) IBOutlet UILabel *foodProtein;
-         @property (weak, nonatomic) IBOutlet UILabel *foodA;
-         @property (weak, nonatomic) IBOutlet UILabel *foodCp;
-         @property (weak, nonatomic) IBOutlet UILabel *foodUp;
-         @property (weak, nonatomic) IBOutlet UILabel *foodIp;
-         @property (weak, nonatomic) IBOutlet UILabel *foodAllergen;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentVitADv;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentVitCDv;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentCalciumDv;
-         @property (weak, nonatomic) IBOutlet UILabel *foodPercentIronDv;
-         */
+
         NSDictionary *nutrition = [self.food nutrition];
         self.foodNameLabel.text = [self.food name];
 

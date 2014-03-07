@@ -71,6 +71,7 @@
                         
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
+                        food.nutrition = aFood[@"nutrition"];
                         [tempSubMeal addObject:food];
                     }
                     //add dictionary to submeals array
@@ -92,6 +93,7 @@
                         
                         FoodItem *food = [[FoodItem alloc] init];
                         food.name = aFood[@"name"];
+                        food.nutrition = aFood[@"nutrition"];
                         [tempSubMeal addObject:food];
                     }
                     //add dictionary to submeals array
