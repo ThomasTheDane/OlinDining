@@ -33,10 +33,22 @@
     [super viewDidLoad];
     id tracker = [[GAI sharedInstance] defaultTracker];
     
-    [tracker set:kGAIScreenName value:@"Week View"];
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+//    [tracker set:kGAIScreenName value:@"Week View"];
+//    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    NSLog(@"masterview loaded");
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dayLoaded) name:@"initWithJsonWeekFinished" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emptyError) name:@"initWithJsonWeekEmptyError" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkError) name:@"initWithJsonWeekNetworkError" object:nil];
     self.week = [[Week alloc] init];
+
+    UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadData:)];
+    self.navigationItem.rightBarButtonItem = reloadButton;
+
+    self.activitySpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.activitySpinner setCenter:CGPointMake(320 / 2.0, 25)];
+    [self.view addSubview:self.activitySpinner];
+    [self.activitySpinner startAnimating];
+    [self.activitySpinner setHidesWhenStopped:YES];
     
     //    [self dayLoaded];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -47,8 +59,41 @@
     //    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
+- (void)reloadData:(id)sender{
+    [self.activitySpinner startAnimating];
+    self.week = [[Week alloc] init];
+    if(self.errorView){
+        [self.errorView removeFromSuperview];
+    }
+    self.isLoaded = FALSE;
+}
+
 - (void)dayLoaded{
+    [self.activitySpinner stopAnimating];
     [self.tableView reloadData];
+    self.isLoaded = TRUE;
+}
+
+-(void)emptyError{
+    self.errorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    UITextView *errorMessage = [[UITextView alloc] initWithFrame:CGRectMake(0, 140, 320, 80)];
+    [errorMessage setText:@"Seems the menu is out of date, you should go complain to the dining hall about that"];
+    [errorMessage setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:20]];
+    [errorMessage setEditable:NO];
+    [self.errorView addSubview:errorMessage];
+    [super.view addSubview:self.errorView];
+    [self.activitySpinner stopAnimating];
+}
+
+-(void)networkError{
+    self.errorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    UITextView *errorMessage = [[UITextView alloc] initWithFrame:CGRectMake(0, 140, 320, 80)];
+    [errorMessage setText:@"Seems there was a connectivity error, you should probably go blame Ezra Varady"];
+    [errorMessage setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:20]];
+    [errorMessage setEditable:NO];
+    [self.errorView addSubview:errorMessage];
+    [super.view addSubview:self.errorView];
+    [self.activitySpinner stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning{

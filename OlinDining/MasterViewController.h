@@ -16,5 +16,7 @@
 
 @property (strong, nonatomic) DayViewController *dayViewController;
 @property (strong, nonatomic) Week *week;
-
+@property (strong, nonatomic) UIView *errorView;
+@property (strong, nonatomic) UIActivityIndicatorView *activitySpinner;
+@property (nonatomic, assign) BOOL isLoaded;
 @end

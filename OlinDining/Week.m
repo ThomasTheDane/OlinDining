@@ -29,7 +29,10 @@
         
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             NSLog(@"Loaded and shit");
-            
+            if(!JSON[0]){
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"initWithJsonWeekEmptyError" object:nil];
+                return;
+            }
             NSMutableArray *tempDays = [[NSMutableArray alloc] init];
             for(NSDictionary *day in JSON){
                 Day *aDay = [[Day alloc] init];
@@ -112,6 +115,7 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:@"initWithJsonWeekFinished" object:nil];
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
             NSLog(@"NSError: %@",[error localizedDescription]);
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"initWithJsonWeekNetworkError" object:nil];
         }];
         [operation start];
     }
