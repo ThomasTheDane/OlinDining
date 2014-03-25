@@ -14,14 +14,15 @@ function getMenuStream (next) {
 
   process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
-  rem.stream("http://news.ycombinator.com/").get().pipe(skim({
-    "$query": "td.title ~ td ~ td.title > a",
+  rem.stream("https://olindining.sodexomyway.com/").get().pipe(skim({
+    "$query": "td",
     "$each": {
       "title": "(text)",
       "link": "(attr href)"
     }
   }, function (err, json) {
-    console.log(json);
+    console.log(err);
+    // next("https://olindining.sodexomyway.com/images/Week%202_tcm519-2231.htm");
   }));
 
   // rem.stream('http://olindining.sodexomyway.com/dining-choices/index.html/').get().pipe(skim({
@@ -60,20 +61,20 @@ getMenuStream(function (href) {
 
   rem.stream('http://olindining.com/' + href).get().pipe(skim({
     'breakfast': {
-      $query: '.brk',
-      $each: '(text)'
+      "query": '.brk',
+      "each": '(text)'
     },
     'lunch': {
-      $query: '.lun',
-      $each: '(text)'
+      "query": '.lun',
+      "each": '(text)'
     },
     'dinner': {
-      $query: '.din',
-      $each: '(text)'
+      "query": '.din',
+      "each": '(text)'
     },
     'scripts': {
-      $query: 'script',
-      $each: '(text)'
+      "query": 'script',
+      "each": '(text)'
     }
   }, function (res) {
     if (!res.scripts[1]) {
